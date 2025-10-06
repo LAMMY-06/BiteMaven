@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MealPlanner</title>
+  <link rel="stylesheet" href="prac.css">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="BiteMaven Logo" class="logo" />
+    <div class="header-text">
+      <h1>BiteMaven</h1>
+      <p>Enter your ingredients and get a personalized weekly meal plan!</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="input-section">
+      <h2>What's in Your Kitchen?</h2>
+      <form id="ingredient-form">
+        <label for="ingredients">Available Ingredients/foodstuffs:</label>
+        <textarea id="ingredients" name="ingredients" rows="4" placeholder="e.g., rice, eggs, tomatoes, onions..."></textarea>
+        <button type="submit">Generate Meal Schedule</button>
+      </form>
+    </section>
+
+    <section id="meal-plan">
+      <h2>Your Weekly Meal Schedule</h2>
+      <div id="meal-schedule">
+        <!-- JavaScript will populate this -->
+      </div>
+<div id="multi-plan-controls">
+  <input type="text" id="plan-name" placeholder="Name your plan" />
+  <button id="save-named-plan">Save Named Plan</button>
+
+  <select id="saved-plans">
+    <option value="">-- Load a Saved Plan --</option>
+  </select>
+  <button id="load-plan">Load</button>
+  <button id="delete-plan">Delete</button>
+</div>
+
+    </section>
+  </main>
+
+  <script src="prac.js"></script>
+</body>
+</html>
