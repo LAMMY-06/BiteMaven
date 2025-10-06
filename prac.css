@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #DFE6E6;
+  color: #1f2937;
+  padding: 1rem;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  background-color: #05704B;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.header-text h1 {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.header-text p {
+  font-size: 1rem;
+}
+
+/* Input Section */
+#input-section {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: #BDCBCB;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#input-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  color: #474747;
+}
+
+#input-section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #70052A;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+form textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  resize: vertical;
+}
+
+form button, button {
+  background-color: #05704B;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover, button:hover {
+  background-color: #045c3a;
+}
+
+/* Meal Plan Section */
+#meal-plan {
+  margin-top: 3rem;
+}
+
+#meal-plan h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #05704B;
+}
+
+#meal-schedule {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.day {
+  background-color: #079C68;
+  border: 2px solid #056070;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: calc(33.333% - 1rem);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.day:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.day h3 {
+  margin-bottom: 1rem;
+  color: #05704B;
+  font-size: 1.3rem;
+  border-bottom: 2px solid #056070;
+  padding-bottom: 0.5rem;
+}
+
+.day p {
+  margin: 0.75rem 0;
+  padding: 0.5rem;
+  background-color: #079C68;
+  border-radius: 6px;
+  border-left: 3px solid #05704B;
+}
+
+/* Multi-plan Controls */
+#multi-plan-controls {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #BDCBCB;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#plan-name, #saved-plans {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  flex: 1;
+  min-width: 200px;
+}
+
+#multi-plan-controls button {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+}
+
+.clear-btn {
+  background-color: #70052A;
+  margin-top: 1rem;
+}
+
+.clear-btn:hover {
+  background-color: #a31414;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .day {
+    width: calc(50% - 1rem);
+  }
+  
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .logo {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .day {
+    width: 100%;
+  }
+  
+  #multi-plan-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  #plan-name, #saved-plans {
+    min-width: auto;
+  }
+}
